@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4AEAC1891D58CB9700A0EDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC1881D58CB9700A0EDEB /* AppDelegate.swift */; };
-		4AEAC18B1D58CB9700A0EDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC18A1D58CB9700A0EDEB /* ViewController.swift */; };
 		4AEAC18E1D58CB9700A0EDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEAC18C1D58CB9700A0EDEB /* Main.storyboard */; };
 		4AEAC1901D58CB9700A0EDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEAC18F1D58CB9700A0EDEB /* Assets.xcassets */; };
 		4AEAC1931D58CB9700A0EDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEAC1911D58CB9700A0EDEB /* LaunchScreen.storyboard */; };
+		4AEAC19B1D58CE1900A0EDEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC19A1D58CE1900A0EDEB /* MapViewController.swift */; };
+		4AEAC19D1D58CF2C00A0EDEB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC19C1D58CF2C00A0EDEB /* TableViewController.swift */; };
+		4AEAC1A01D58D01900A0EDEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEAC19F1D58D01900A0EDEB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4AEAC1851D58CB9700A0EDEB /* Memorable Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memorable Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEAC1881D58CB9700A0EDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AEAC18A1D58CB9700A0EDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AEAC18D1D58CB9700A0EDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AEAC18F1D58CB9700A0EDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEAC1921D58CB9700A0EDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AEAC1941D58CB9700A0EDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AEAC19A1D58CE1900A0EDEB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4AEAC19C1D58CF2C00A0EDEB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4AEAC19F1D58D01900A0EDEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEAC1A01D58D01900A0EDEB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				4AEAC1871D58CB9700A0EDEB /* Memorable Places */,
 				4AEAC1861D58CB9700A0EDEB /* Products */,
+				4AEAC19E1D58D01800A0EDEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +61,22 @@
 			isa = PBXGroup;
 			children = (
 				4AEAC1881D58CB9700A0EDEB /* AppDelegate.swift */,
-				4AEAC18A1D58CB9700A0EDEB /* ViewController.swift */,
+				4AEAC19C1D58CF2C00A0EDEB /* TableViewController.swift */,
+				4AEAC19A1D58CE1900A0EDEB /* MapViewController.swift */,
 				4AEAC18C1D58CB9700A0EDEB /* Main.storyboard */,
 				4AEAC18F1D58CB9700A0EDEB /* Assets.xcassets */,
 				4AEAC1911D58CB9700A0EDEB /* LaunchScreen.storyboard */,
 				4AEAC1941D58CB9700A0EDEB /* Info.plist */,
 			);
 			path = "Memorable Places";
+			sourceTree = "<group>";
+		};
+		4AEAC19E1D58D01800A0EDEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAC19F1D58D01900A0EDEB /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEAC18B1D58CB9700A0EDEB /* ViewController.swift in Sources */,
+				4AEAC19B1D58CE1900A0EDEB /* MapViewController.swift in Sources */,
 				4AEAC1891D58CB9700A0EDEB /* AppDelegate.swift in Sources */,
+				4AEAC19D1D58CF2C00A0EDEB /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
